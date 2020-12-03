@@ -1,3 +1,5 @@
+#Solution 1
+
 def solution(number)
   b = []
   (0...number).each do |num|
@@ -6,4 +8,8 @@ def solution(number)
   return b.reduce(:+)
 end
 
-p solution(10)
+#Solution 2
+
+def solution(num)
+  (1...num).select {|n| n%3==0 || n%5==0}.reduce(:+)
+end
